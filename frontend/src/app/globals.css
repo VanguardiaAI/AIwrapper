@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+
+    --background: 0 0% 100%;
+
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+
+    --input: 214.3 31.8% 91.4%;
+
+    --ring: 222.2 84% 4.9%;
+
+    --chart-1: 12 76% 61%;
+
+    --chart-2: 173 58% 39%;
+
+    --chart-3: 197 37% 24%;
+
+    --chart-4: 43 74% 66%;
+
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+
+    --color-1: 280 100% 70%;  /* Púrpura */
+    --color-2: 320 100% 70%;  /* Rosa-púrpura */
+    --color-3: 260 100% 70%;  /* Azul-púrpura */
+    --color-4: 240 100% 70%;  /* Azul */
+    --color-5: 300 100% 70%;  /* Rosa */
+  }
+  .dark {
+
+    --background: 222.2 84% 4.9%;
+
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+
+    --input: 217.2 32.6% 17.5%;
+
+    --ring: 212.7 26.8% 83.9%;
+
+    --chart-1: 220 70% 50%;
+
+    --chart-2: 160 60% 45%;
+
+    --chart-3: 30 80% 55%;
+
+    --chart-4: 280 65% 60%;
+
+    --chart-5: 340 75% 55%
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* CPU Architecture Animations - Ultra rápidas */
+.cpu-architecture {
+  offset-anchor: 10px 0px;
+  animation: animation-path;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.75, -0.01, 0, 0.99);
+}
+
+.cpu-line-1 {
+  offset-path: path("M 10 20 h 79.5 q 5 0 5 5 v 30");
+  animation-duration: 2s; /* Reducido de 3s a 2s */
+  animation-delay: 0.1s; /* Reducido de 0.2s a 0.1s */
+}
+
+.cpu-line-2 {
+  offset-path: path("M 180 10 h -69.7 q -5 0 -5 5 v 40");
+  animation-delay: 0.3s; /* Reducido de 1s a 0.3s */
+  animation-duration: 1.2s; /* Reducido de 1.5s a 1.2s */
+}
+
+.cpu-line-3 {
+  offset-path: path("M 130 20 v 21.8 q 0 5 -5 5 h -25");
+  animation-delay: 0.4s; /* Reducido de 0.8s a 0.4s */
+  animation-duration: 2.5s; /* Reducido de 4s a 2.5s */
+}
+
+.cpu-line-4 {
+  offset-path: path("M 170 80 v -21.8 q 0 -5 -5 -5 h -65");
+  animation-delay: 0.2s; /* Reducido de 0.5s a 0.2s */
+  animation-duration: 1.5s; /* Reducido de 2s a 1.5s */
+}
+
+.cpu-line-5 {
+  offset-path: path(
+    "M 135 65 h 15 q 5 0 5 5 v 10 q 0 5 -5 5 h -39.8 q -5 0 -5 -5 v -35"
+  );
+  animation-delay: 0.6s; /* Reducido de 1.5s a 0.6s */
+  animation-duration: 2s; /* Reducido de 3s a 2s */
+}
+
+.cpu-line-6 {
+  offset-path: path("M 94.8 95 v -46");
+  animation-delay: 0.3s; /* Reducido de 0.6s a 0.3s */
+  animation-duration: 3s; /* Reducido de 5s a 3s */
+}
+
+.cpu-line-7 {
+  offset-path: path(
+    "M 88 88 v -15 q 0 -5 -5 -5 h -10 q -5 0 -5 -5 v -5 q 0 -5 5 -5 h 28"
+  );
+  animation-delay: 0.5s; /* Reducido de 0.9s a 0.5s */
+  animation-duration: 2s; /* Reducido de 3s a 2s */
+}
+
+.cpu-line-8 {
+  offset-path: path("M 30 30 h 25 q 5 0 5 5 v 6.5 q 0 5 5 5 h 35");
+  animation-delay: 0.2s; /* Reducido de 0.4s a 0.2s */
+  animation-duration: 1.8s; /* Reducido de 2.5s a 1.8s */
+}
+
+@keyframes animation-path {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* Loader Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loader-text {
+  background: linear-gradient(
+    90deg,
+    #6B7280 25%,
+    #A855F7 50%,
+    #EC4899 75%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 1s infinite; /* Reducido de 1.5s a 1s */
+}
+
+/* Estilos adicionales para AnimatedAIChat */
+.lab-bg::before {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
